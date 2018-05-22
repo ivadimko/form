@@ -1,0 +1,14 @@
+- var site_name = 'Ultra Form'
+- var page_title = 'Welcome'
+
+block vars
+
+doctype html
+
+html(lang='en')
+    head
+        include elements/meta
+        title= (page_title ? page_title + ' - ' : '') + site_name
+    body
+        block content
+        include elements/scripts

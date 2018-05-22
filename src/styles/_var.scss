@@ -1,0 +1,41 @@
+$c-void: #000;
+$c-white: #fff;
+$c-black: #222;
+$c-gray-dark: #ccc;
+
+$c-text: $c-black;
+
+// status
+$c-error: #DA2D1D;
+$c-notice: #FFB424;
+$c-success: #65AD14;
+
+
+//form
+$input-height: 40px;
+
+
+//transition
+$duration: .4s;
+$easing: cubic-bezier(.3, .1, .3, 1);
+
+
+//margin-padding
+
+$text-indent: 3px;
+
+$indent-xxl:  45px;
+$indent-xl:   40px;
+$indent-l:    30px;
+$indent-m:    20px;
+$indent-s:    15px;
+$indent-xs:   10px;
+$indent-xxs:  5px;
+
+//font-weight
+$font-weight_light: 300;
+$font-weight_regular: 400;
+$font-weight_heavier: 500;
+$font-weight_semibold: 600;
+$font-weight_bold: 700;
+$font-weight_extra-bold: 800;
