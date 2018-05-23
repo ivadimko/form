@@ -1,0 +1,50 @@
+mixin input-block(props)
+    .input-block(
+        data-role="input-block"
+        data-type="input"
+        data-required= props.required || null
+        data-validation= props.validation || null)
+        label.input-block__label(data-role="label")
+            span= props.labelText
+            if (props.inputType === 'textarea')
+                textarea(
+                    data-role="input"
+                    name= props.inputName)
+            else
+                input(
+                    data-role="input"
+                    name= props.inputName
+                    type= props.inputType)
+        .input-block__error(data-role="error")
+
+mixin radio-block(props)
+    .input-block(
+        data-role="input-block"
+        data-type="radio"
+        data-required= props.required)
+        p.input-block__label(data-role="label")
+            span= props.labelText
+        each option in props.options
+            label= option
+                input(
+                    data-role="input"
+                    name= props.inputName
+                    type="radio"
+                    value= option)
+        .input-block__error(data-role="error")
+
+mixin select-block(props)
+    .input-block(
+        data-role="input-block"
+        data-type="input"
+        data-required= props.required)
+        label.input-block__label(data-role="label")
+            span= props.labelText
+            select(
+                data-role="input"
+                name= props.inputName)
+                if props.defaultOption
+                    option(selected disabled hidden value='')= props.defaultOption
+                each option in props.options
+                    option(value= option)= option
+        .input-block__error(data-role="error")

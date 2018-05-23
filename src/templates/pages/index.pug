@@ -2,52 +2,76 @@ extends ../layout
 
 block content
     h1 Ultra form
-    form(name="ultra_form" method="POST" action="#")
-        fieldset
-            .input-block(data-role="input-block" data-required="true" data-validation="text")
-                label First Name
-                    input(name="first_name" type="text")
-                .input-block__error(data-role="error")
-            .input-block(data-role="input-block" data-required="true" data-validation="text")
-                label Last Name
-                    input(name="last_name" type="text")
-                .input-block__error(data-role="error")
-            .input-block(data-role="input-block" data-required="true" data-validation="date")
-                label Birthday
-                    input(name="birthday" type="date")
-                .input-block__error(data-role="error")
-            .input-block(data-role="input-block" data-required="true")
-                label Mr
-                    input(name="sex" type="radio" value="mr")
-                label Mrs
-                    input(name="sex" type="radio" value="mrs")
-                .input-block__error(data-role="error")
-            .input-block(data-role="input-block" data-required="true")
-                label Country
-                    select(name="country")
-                        option(selected value="null" style="display:none") Country
-                        option(value="Ukraine") Ukraine
-                        option(value="France") France
-                        option(value="Great Britain") Great Britain
-                        option(value="USA") USA
-                        option(value="Switzerland") Switzerland
-                .input-block__error(data-role="error")
-            .input-block(data-role="input-block" data-required="true" data-validation="email")
-                label Email
-                    input(name="email" type="email")
-                .input-block__error
-            .input-block(data-role="input-block" data-required="true" data-validation="password")
-                label Password
-                    input(name="password" type="password")
-                .input-block__error
-            .input-block(data-role="input-block" data-required="true" data-validation="text")
-                label Address
-                    input(name="address" type="text")
-                .input-block__error
-            .input-block(data-role="input-block" data-validation="text")
-                label Notes
-                    textarea(name="notes")
-                .input-block__error
+    form(data-role="contact-form" name="ultra_form" method="POST" action="#")
+        +input-block({
+          required      : 'true',
+          validation    : 'text',
+          labelText     : 'First Name',
+          inputName     : 'first_name',
+          inputType     : 'text'
+        })
+        +input-block({
+          required      : 'true',
+          validation    : 'text',
+          labelText     : 'Last Name',
+          inputName     : 'last_name',
+          inputType     : 'text'
+        })
+        +input-block({
+         required      : 'true',
+         validation    : 'date',
+         labelText     : 'Birthday',
+         inputName     : 'birthday',
+         inputType     : 'date'
+        })
+        +input-block({
+          required: 'true',
+          validation: 'date',
+          labelText: 'Birthday',
+          inputName: 'birthday',
+          inputType: 'text'
+        })
+        +radio-block({
+          required      : 'true',
+          labelText     : 'Sex',
+          inputName     : 'sex',
+          options       : ['Mr', 'Mrs']
+        })
+        +select-block({
+          required      : 'true',
+          inputName     : 'country',
+          labelText     : 'Country',
+          defaultOption : 'Country',
+          options       : ['Ukraine', 'France', 'Great Britain', 'USA', 'Switzerland']
+        })
+        +input-block({
+          required      : 'true',
+          validation    : 'email',
+          labelText     : 'Email',
+          inputName     : 'email',
+          inputType     : 'email'
+        })
+        +input-block({
+          required      : 'true',
+          validation    : 'password',
+          labelText     : 'Password',
+          inputName     : 'password',
+          inputType     : 'password'
+        })
+        +input-block({
+          required      : 'true',
+          validation    : 'text',
+          labelText     : 'Address',
+          inputName     : 'address',
+          inputType     : 'text'
+        })
+        +input-block({
+          labelText     : 'Notes',
+          inputName     : 'notes',
+          inputType     : 'textarea'
+        })
+
         .actions-toolbar
             .action.primary
-                input(type="submit" value="Submit")
+                button(type="submit") Submit
+    include ../blocks/dialog

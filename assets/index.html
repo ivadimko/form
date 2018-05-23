@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome - Ultra Form</title>
+  <link href="css/main.css" rel="stylesheet"></head>
+  <body>
+    <h1>Ultra form</h1>
+    <form data-role="contact-form" name="ultra_form" method="POST" action="#">
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="text">
+        <label class="input-block__label" data-role="label"><span>First Name</span>
+          <input data-role="input" name="first_name" type="text">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="text">
+        <label class="input-block__label" data-role="label"><span>Last Name</span>
+          <input data-role="input" name="last_name" type="text">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="date">
+        <label class="input-block__label" data-role="label"><span>Birthday</span>
+          <input data-role="input" name="birthday" type="date">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="date">
+        <label class="input-block__label" data-role="label"><span>Birthday</span>
+          <input data-role="input" name="birthday" type="text">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="radio" data-required="true">
+        <p class="input-block__label" data-role="label"><span>Sex</span></p>
+        <label>Mr
+          <input data-role="input" name="sex" type="radio" value="Mr">
+        </label>
+        <label>Mrs
+          <input data-role="input" name="sex" type="radio" value="Mrs">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true">
+        <label class="input-block__label" data-role="label"><span>Country</span>
+          <select data-role="input" name="country">
+            <option selected disabled hidden value="">Country</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="France">France</option>
+            <option value="Great Britain">Great Britain</option>
+            <option value="USA">USA</option>
+            <option value="Switzerland">Switzerland</option>
+          </select>
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="email">
+        <label class="input-block__label" data-role="label"><span>Email</span>
+          <input data-role="input" name="email" type="email">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="password">
+        <label class="input-block__label" data-role="label"><span>Password</span>
+          <input data-role="input" name="password" type="password">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input" data-required="true" data-validation="text">
+        <label class="input-block__label" data-role="label"><span>Address</span>
+          <input data-role="input" name="address" type="text">
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="input-block" data-role="input-block" data-type="input">
+        <label class="input-block__label" data-role="label"><span>Notes</span>
+          <textarea data-role="input" name="notes"></textarea>
+        </label>
+        <div class="input-block__error" data-role="error"></div>
+      </div>
+      <div class="actions-toolbar">
+        <div class="action primary">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+<dialog data-role="modal-dialog"><strong>Congrats. Your form is Valid!</strong>
+  <button data-role="close">Got It!</button>
+</dialog>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/main.js"></script></body>
+</html>
